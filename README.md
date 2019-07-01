@@ -67,9 +67,53 @@ copy the .pub files contents and past in the lightsail instince in the below fil
 `sudo nano ~/.ssh/authorized_keys`
 
 
-`su - grader
-sudo mkdir .ssh
-sudo chmod 700 .ssh
-sudo nano .ssh/authorized_keys
-sudo chmod 644 .ssh/authorized_keys
-sudo service ssh restart`
+`su - grader`
+`sudo mkdir .ssh`
+`sudo chmod 700 .ssh`
+`sudo nano .ssh/authorized_keys`
+`sudo chmod 644 .ssh/authorized_keys`
+`sudo service ssh restart`
+
+### Configure the local timezone to UTC
+
+`sudo timedatectl set-timezone UTC`
+
+###  Install and configure Apache to serve a Python mod_wsgi application
+
+`sudo apt-get install apache2`
+
+`sudo apt-get install libapache2-mod-wsgi`
+
+### Install and configure PostgreSQL
+
+`sudo apt-get install postgresql postgresql-contrib`
+
+`sudo -u postgres createuser -P catalog`
+
+`sudo -u postgres createdb -O catalog catalog`
+
+### Install packages for your application
+
+`sudo apt-get install python-sqlalchemy python-pip`
+`sudo apt-get install python-psycopg2 python-flask`
+`sudo pip install oauth2client`
+`sudo pip install requests`
+
+### Install git
+
+`sudo apt-get install git`
+
+# Deploy the Item Catalog project
+
+### Clone and setup your Item Catalog
+
+`cd /var/www/`
+`sudo mkdir fullstack-nanodegree-vm`
+`sudo chown www-data:www-data fullstack-nanodegree-vm/`
+`sudo -u www-data git clone https://github.com/zacktwp/Item_Catalog.git fullstack-nanodegree-vm`
+
+### Configure postgresql
+
+Replace the engine with :
+
+`engine = create_engine('postgresql://catalog:DB-PASSWORD@localhost/catalog')`
