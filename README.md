@@ -36,4 +36,40 @@ Enable firewall
 
 `sudo ufw enable`
 
- 
+### Update all currently installed packages
+
+`sudo apt-get update`
+
+`sudo apt-get upgrade`
+
+### Create a new user account named grader
+
+`sudo adduser grader`
+
+### Give grader the permission to sudo
+
+sudo touch /etc/sudoers.d/grader
+
+sudo nano /etc/sudoers.d/grader
+
+past the below into the file:
+
+`grader ALL=(ALL) NOPASSWD:ALL`
+
+### Create an SSH key pair for grader using the ssh-keygen tool
+
+in your local terminal type:
+
+`ssh-keygen`
+
+copy the .pub files contents and past in the lightsail instince in the below file
+
+`sudo nano ~/.ssh/authorized_keys`
+
+
+`su - grader
+sudo mkdir .ssh
+sudo chmod 700 .ssh
+sudo nano .ssh/authorized_keys
+sudo chmod 644 .ssh/authorized_keys
+sudo service ssh restart`
