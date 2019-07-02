@@ -1,6 +1,8 @@
 # Configure an apache linux server
 
 ### Start up an AWS lightsail instance
+IP: 18.236.181.224
+url: zacktwp.com
 
 ### Configure instance ufw firewall
 
