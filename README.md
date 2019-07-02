@@ -114,6 +114,8 @@ copy the .pub files contents and past in the lightsail instince in the below fil
 
 ### Configure postgresql
 
-Replace the engine with :
+Replace the engine in the database_setup.py, PopulateDB.py, and Application.py with :
 
 `engine = create_engine('postgresql://catalog:DB-PASSWORD@localhost/catalog')`
+
+### buy and register domain name zacktwp.com and change google sign in json file
