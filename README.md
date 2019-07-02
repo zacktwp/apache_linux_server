@@ -3,6 +3,7 @@
 ### Start up an AWS lightsail instance
 IP: 18.236.181.224
 url: zacktwp.com
+ssh port 2200
 
 ### Configure instance ufw firewall
 
