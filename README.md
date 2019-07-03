@@ -122,3 +122,9 @@ Replace the engine in the database_setup.py, PopulateDB.py, and Application.py w
 `engine = create_engine('postgresql://catalog:DB-PASSWORD@localhost/catalog')`
 
 ### buy and register domain name zacktwp.com and change google sign in json file
+
+### References
+
+[Slack Chat](https://udacity-students.slack.com/archives/GH2FFKGHJ/p1561149416092500)
+
+[Changing ssh port](https://www.liquidweb.com/kb/changing-the-ssh-port/)
